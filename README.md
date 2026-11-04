@@ -232,12 +232,6 @@ uninstaller, documentation, and design images. Thank you to the
 upstream gateway's maintainers and contributors for the gateway
 itself.
 
-## Community
-
-- Telegram channel: @BDCRTEAM
-- YouTube: @w8bdcrteam
-- Bots: @w8bdcraibot, @w8appstorebot
-
 ## Documentation index
 
 Files in this repo, in the order GitHub lists them:
