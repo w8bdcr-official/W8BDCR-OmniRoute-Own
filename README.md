@@ -14,11 +14,9 @@ curl -fsSL https://raw.githubusercontent.com/w8bdcr-official/W8BDCR-OmniRoute-Ow
 
 💡 Tip: To update on Termux anytime, run `omniroute-update`.
 
-![W8BDCR OmniRoute dashboard](thumbnail-draft.png)
 
 ## 🚀 W8BDCR OmniRoute — One Gateway for Every AI Model
 
-![W8BDCR OmniRoute banner](thumbnail-draft.png)
 
 Start it, then open the dashboard:
 
@@ -32,7 +30,6 @@ http://localhost:20128
 
 ## 🔥 Free Tokens — Visible on Your Own Dashboard
 
-![Animated dashboard summary](dashboard-animation-draft.gif)
 
 Your free-token usage is shown live on the dashboard, so you can see
 what you actually used. This repo does not print a borrowed total —
@@ -49,7 +46,6 @@ the number you see after install is your own gateway's number.
 
 ## 🛠️ Works the second you install it — no keys, no config
 
-![Works on install](thumbnail-draft.png)
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
