@@ -223,6 +223,136 @@ Everything in one place — follow, chat, or open an issue.
 | SECURITY.md | How to report a security problem |
 | CONTRIBUTING.md | How to contribute, in W8BDCR's own wording |
 
+## ⚡ Detailed Quick Start
+
+### 1) Install & run
+
+See the Termux Quick Install at the top of this README, then:
+
+```bash
+omniroute serve
+```
+
+Dashboard: `http://localhost:20128`
+
+### 2) Connect a FREE provider
+
+Dashboard → Providers → connect a free provider → done.
+
+### 3) Point your coding tool
+
+```
+Base URL: http://localhost:20128/v1
+API Key:  [copy from Dashboard → Endpoints]
+Model:    auto
+```
+
+### 4) Verify it's working
+
+```bash
+curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
+```
+
+You should see your connected models listed. That's it — start
+coding, and the gateway auto-routes and falls back for you.
+
+### More install methods — Docker, source, pnpm, Arch, Nix, Podman
+
+These are upstream gateway methods, not this repo's Termux
+installer. They work the same way once the gateway is running,
+through the same dashboard and the same `localhost:20128` endpoint.
+For a phone, use the Termux install at the top — it is the one
+this repo tests and fixes.
+
+### Faster / leaner install
+
+On a slow phone or CI, prefer the Termux install in this repo:
+it already uses a low-memory fallback and skips nothing you need
+for the dashboard. No separate CLI-only package is needed — the
+CLI and the dashboard are served by the same process, on one port.
+
+## 🌐 Providers
+
+Every major lab, through one endpoint. Connect a provider once in
+the dashboard, then use it from any tool through `localhost:20128`.
+The full live catalog is in the dashboard after install — this
+repo does not print a borrowed provider count.
+
+## 🆓 Free Forever — $0, no card
+
+Free tiers are visible in the dashboard's free catalog. Connect a
+free provider, no signup where the provider allows it, and start
+coding. Quotas and limits are the provider's own — check them in
+the dashboard before you rely on one.
+
+## 🔀 Combos
+
+A combo is a preset route: which provider answers first, which one
+takes over on failure, and how much compression to apply. Pick a
+combo in the dashboard, or let smart routing pick for you.
+
+## ⚙️ Zero-config
+
+No keys, no config to start. Model `auto` means the gateway picks
+the best available route for your prompt. Add keys later only for
+providers you actually want to pay for.
+
+## 🛡️ Resilience
+
+If a provider fails, the gateway retries, cools down, and falls
+back to the next route — so one outage does not kill your session.
+Fallbacks, retries, and timeouts are configured per combo.
+
+## ⭐ What Sets It Apart
+
+- Local-first, private by default
+- One endpoint for every tool
+- Visible usage, visible cost
+- Termux-first install, update, and uninstall
+- No lock-in: change providers by changing config
+
+## 📡 Support
+
+- Report a bug: open an issue in this repo
+- Ask a question: @BDCRTEAM on Telegram
+- Security problem: see SECURITY.md
+
+## 📈 What's New
+
+- v1.0 — Termux installer, Android fixes, `omniroute-update`
+  helper, dashboard verify, uninstaller, W8BDCR README and designs
+- Next — more Termux-tested fixes, more dashboard images, more
+  guides, based on real phone testing
+
+## 🖥️ Compatible CLIs
+
+Point any OpenAI-compatible coding tool at the gateway:
+
+```
+Base URL: http://localhost:20128/v1
+API Key:  [copy from Dashboard → Endpoints]
+Model:    auto
+```
+
+## 🎬 In Action
+
+Video guides for this repo live on @w8bdcrteam. If you made a
+video about W8BDCR OmniRoute, share it on @BDCRTEAM and it can be
+featured here.
+
+## 👥 Contributors
+
+This repo's contributors start with W8BDCR. Upstream gateway
+contributors are not listed here, because their work belongs to
+the upstream project — see Acknowledgments below. New
+contributors to this installer, docs, and designs are welcome;
+see CONTRIBUTING.md.
+
+## ⭐ Stars
+
+Star history for this repo starts when it is posted. This repo
+does not borrow another project's star graph.
+
 ## 🙏 Acknowledgments
 
 This installer stands on an upstream open-source gateway — the
