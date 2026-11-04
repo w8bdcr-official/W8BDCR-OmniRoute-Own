@@ -18,6 +18,8 @@ curl -fsSL https://raw.githubusercontent.com/w8bdcr-official/W8BDCR-OmniRoute-Ow
 
 ## 🚀 W8BDCR OmniRoute — One Gateway for Every AI Model
 
+![W8BDCR OmniRoute banner](thumbnail-draft.png)
+
 Start it, then open the dashboard:
 
 ```bash
@@ -26,6 +28,33 @@ omniroute serve
 
 ```
 http://localhost:20128
+```
+
+## 🔥 Free Tokens — Visible on Your Own Dashboard
+
+![Animated dashboard summary](dashboard-animation-draft.gif)
+
+Your free-token usage is shown live on the dashboard, so you can see
+what you actually used. This repo does not print a borrowed total —
+the number you see after install is your own gateway's number.
+
+## 🧭 Available
+
+|  |  |  |
+| --- | --- | --- |
+| 🚀 Start | 📦 Install | ⚡ Quick Start |
+| 💡 Learn | ❓ What It Does | ⭐ Why W8BDCR |
+| ✨ Features | 🔌 Providers | 🖥️ CLI |
+| 🔒 Private | 📚 Docs | 🤝 Community |
+
+## 🛠️ Works the second you install it — no keys, no config
+
+![Works on install](thumbnail-draft.png)
+
+```bash
+curl http://localhost:20128/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{"model": "auto", "messages": [{"role": "user", "content": "Hello!"}]}'
 ```
 
 ## Quick start — copy, paste, run
@@ -66,6 +95,24 @@ console.log(await r.json());
 
 Pick a specific provider when you want one, and let the gateway fall
 back to another when your first pick fails.
+
+## 🤝 The Promise
+
+You write your tool once, against one local address. The gateway
+handles which provider answers, what happens when one fails, and
+how much you spent — so you do not rewrite your tool for every new
+model or provider.
+
+## ⭐ Why W8BDCR OmniRoute
+
+- **Built for a phone first.** Termux install, Termux update, Termux
+  uninstall — no desktop-only steps hidden in the middle.
+- **No lock-in.** Change providers by changing config, not by
+  rewriting your app.
+- **Visible cost.** Usage is on the dashboard, not buried in a bill
+  you see at month's end.
+- **Local-first.** The gateway runs on your device; your keys stay
+  on your device.
 
 ## What it does
 
