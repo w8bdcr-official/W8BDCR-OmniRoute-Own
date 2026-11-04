@@ -182,6 +182,56 @@ device.
    newer version exists, and re-runs the installer so the fixes are
    re-applied.
 
+## 📣 Community & Help
+
+Everything in one place — follow, chat, or open an issue.
+
+| Channel | Where / how |
+| --- | --- |
+| Telegram channel | @BDCRTEAM |
+| YouTube | @w8bdcrteam |
+| Bots | @w8bdcraibot, @w8appstorebot |
+| Report a bug | Open an issue in this repo |
+| Contribute | See CONTRIBUTING.md |
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+| --- | --- |
+| Installer | Bash, Termux `pkg` |
+| Gateway runtime | Node.js, npm |
+| Dashboard | Upstream gateway web UI, port 20128 |
+| This repo's images | PIL (Python), own dashboard mock |
+| Platforms | Android (Termux) first, npm/Docker/source as gateway methods |
+
+## 📖 Documentation
+
+### Getting Started
+
+| Document | Description |
+| --- | --- |
+| README.md | Install, run, quick start, features |
+| install.sh | Full Termux install + Android fixes |
+| update.sh | Update + re-apply fixes |
+| uninstall.sh | Clean removal for all install methods in this repo |
+
+### Operations & Deployment
+
+| Document | Description |
+| --- | --- |
+| .env.example | Placeholder config, no real keys |
+| SECURITY.md | How to report a security problem |
+| CONTRIBUTING.md | How to contribute, in W8BDCR's own wording |
+
+## 🙏 Acknowledgments
+
+This installer stands on an upstream open-source gateway — the
+gateway itself is not W8BDCR's code, and this repo does not claim
+it. What is W8BDCR's here is the Termux installer, updater,
+uninstaller, documentation, and design images. Thank you to the
+upstream gateway's maintainers and contributors for the gateway
+itself.
+
 ## Community
 
 - Telegram channel: @BDCRTEAM
