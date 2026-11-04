@@ -125,6 +125,41 @@ model or provider.
 - **CLI first.** Everything the dashboard does starts from the
   command line, so it fits a Termux workflow.
 
+## 🖥️ Where W8BDCR OmniRoute Runs — Anywhere
+
+Same gateway, your rules. This repo's installer is Termux-first:
+
+| Platform | Install | Highlights |
+| --- | --- | --- |
+| Android (Termux) | `bash install.sh` in this repo | Runs on your phone, no root |
+| npm (global) | `npm install -g omniroute` | One command, any OS |
+| Docker | Upstream gateway image | Multi-arch, isolated |
+| From source | Upstream repo + `npm install` | Hack on it, contribute |
+
+## 🔒 Private & Local-First
+
+Your keys, your machine, your data. The gateway is a local proxy —
+it does not phone home. Keys live in environment variables on your
+phone, never in this repo, and never in a screenshot you share.
+
+## 🛠️ Full CLI
+
+Beyond the dashboard, the gateway is a command-line cockpit:
+
+```bash
+omniroute serve      # serve gateway + dashboard (port 20128)
+omniroute --version  # check the install
+omniroute-update     # update from this repo's updater
+bash uninstall.sh    # remove it (add --purge for config too)
+```
+
+## 💰 Save Tokens — Automatically
+
+The gateway's compression and routing help you spend fewer tokens
+for the same answer. The exact saving depends on your prompt and
+provider — the dashboard shows your own measured usage, not a
+borrowed percentage.
+
 ## Providers, privacy, and keys
 
 Providers are configured by you, on your own phone, with your own API
