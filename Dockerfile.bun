@@ -1,0 +1,6 @@
+# Bun variant — see Dockerfile for the Node variant.
+FROM oven/bun:1-alpine
+WORKDIR /app
+RUN bun add -g omniroute
+EXPOSE 20128
+CMD ["omniroute", "serve"]

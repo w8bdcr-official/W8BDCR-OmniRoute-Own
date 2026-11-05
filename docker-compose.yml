@@ -1,0 +1,6 @@
+services:
+  omniroute:
+    image: node:20-alpine
+    command: sh -c "npm install -g omniroute && omniroute serve"
+    ports:
+      - "20128:20128"
