@@ -38,10 +38,10 @@ command -v npm >/dev/null 2>&1 || fail "npm is missing after the pkg step."
 
 # --- Step 2: gateway from npm --------------------------------------
 say "[2/4] Installing OmniRoute ($WANTED) from npm..."
-if ! npm install -g "omniroute@$WANTED" --no-audit --no-fund --omit=dev 2>/dev/null; then
+if ! npm install -g "omniroute@$WANTED" --no-audit --no-fund --omit=dev --loglevel=info --progress=true; then
   say "      Normal install failed, retrying with a low-memory Node..."
   node --max-old-space-size=512 "$(npm root -g)/npm/bin/npm-cli.js" \
-    install -g "omniroute@$WANTED" --no-audit --no-fund --omit=dev \
+    install -g "omniroute@$WANTED" --no-audit --no-fund --omit=dev --loglevel=info --progress=true \
     || fail "npm install of omniroute failed."
 fi
 
